@@ -51,10 +51,11 @@ The first commit  to the repo includes 2 scripts. The main script has functions,
 In general the code currently is just to test the functionality of the device and API. The code needs further restructoring and providing more options to the user since now most of the things are hardcoded.
 
 # To Do
-- Test on linux and Nano
+- Test on linux and Nano - (done) tested on Nano -> cloned repo -> connected to camera using wifi adapter -> run main with preview.
 - Cleanup code
 
 # Observations
+- As expected there is lag in the live preview mode, but given the speed at which the inspection platform moves, my initial thoughts are that the latency between the camera and the nano won't be a problem
 - When used in live preview mode, the output resolution is limited and FPS is 8. This is not nice, since in that case the device is not used up to its full capacity - 4K video recording.
 - Device has GPS and it was able to output correct coordinates for the taken image. This can be interesting to check how it would perform in the sewer
   
