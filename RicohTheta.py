@@ -122,16 +122,10 @@ class RicohTheta:
             response = requests.get(a_file, stream=True)
             # reponse returns file path link, the name of the file starts from char 67
             file_name = a_file[67:]
-            if self.shooting_mode  == "video":
-                with open('video{}.mp4'.format(a_file[67:]), 'wb') as f:
-                    # write the contents of the response (r.content)
-                    # to a new file in binary mode.
-                    f.write(response.content)
-            else:
-                 with open('image{}.jpg'.format(a_file[67:]), 'wb') as f:
-                    # write the contents of the response (r.content)
-                    # to a new file in binary mode.
-                    f.write(response.content)
+            with open(file_name, 'wb') as f:
+                # write the contents of the response (r.content)
+                # to a new file in binary mode.
+                f.write(response.content)
             file_count+=1
             print("[INFO] Downloading file {}complete...".format("a_file[67:] "))
         print("[INFO] All files downloaded...")
