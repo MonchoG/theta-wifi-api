@@ -50,12 +50,31 @@ The first commit  to the repo includes 2 scripts. The main script has functions,
 
 In general the code currently is just to test the functionality of the device and API. The code needs further restructoring and providing more options to the user since now most of the things are hardcoded.
 
-# To Do
-- Test on linux and Nano - (done) tested on Nano -> cloned repo -> connected to camera using wifi adapter -> run main with preview.
-- Cleanup code
+# Update 30-12-2020
+Starting building a proper client class wrapper to expose the required methods in a decent way.
+Client class needs:
+- base url - the ip when connected to ricoh device is the same, the authentication credentials are different - done
+- get request method - done
+- post request method - done
+- Methods from the API:
+  - get device info - done
+  - get device state - done
+  - start/stop capture - done
+  - list files - 
+  - get file - done
+  - Extra could be: 
+    - live_preview - 
+Ricoh Theta V driver class is in the RicohTheta.py file. It can be imported,instantiated and used as a class object
 
 # Observations
 - As expected there is lag in the live preview mode, but given the speed at which the inspection platform moves, my initial thoughts are that the latency between the camera and the nano won't be a problem
 - When used in live preview mode, the output resolution is limited and FPS is 8. This is not nice, since in that case the device is not used up to its full capacity - 4K video recording.
 - Device has GPS and it was able to output correct coordinates for the taken image. This can be interesting to check how it would perform in the sewer
-  
+- the set_device_imageMode breaks if fileFormat is specified, invalid param values for some reason... File format param breaks for video too, apparently it is not passed properly
+
+
+# To Do
+- Test on linux and Nano - (done) tested on Nano -> cloned repo -> connected to camera using wifi adapter -> run main with preview.
+- Cleanup code (done), can be cleaned up further later
+- Add methods for setting the camera specific params (ISO, HDR etc)
+
