@@ -64,7 +64,7 @@ Client class needs:
   - get file - done
   - Extra could be: 
     - live_preview - 
-Ricoh Theta V driver class is in the RicohTheta.py file. It can be imported,instantiated and used as a class object
+  - Ricoh Theta V driver class is in the RicohTheta.py file. It can be imported,instantiated and used as a class object
 
 # Observations
 - As expected there is lag in the live preview mode, but given the speed at which the inspection platform moves, my initial thoughts are that the latency between the camera and the nano won't be a problem
