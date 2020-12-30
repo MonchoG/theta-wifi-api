@@ -76,5 +76,5 @@ Client class needs:
 # To Do
 - Test on linux and Nano - (done) tested on Nano -> cloned repo -> connected to camera using wifi adapter -> run main with preview.
 - Cleanup code (done), can be cleaned up further later
-- Add methods for setting the camera specific params (ISO, HDR etc)
+- Add methods for setting the camera specific params (ISO, HDR etc) / delete and list files
 
